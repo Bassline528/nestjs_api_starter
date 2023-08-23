@@ -18,11 +18,13 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Post('sign-in')
+  @HttpCode(HttpStatus.OK)
   signin(@Body() authDto: AuthDto){
     return this.authService.signin(authDto);
   }
 
   @Post('sign-up')
+  @HttpCode(HttpStatus.CREATED)
   signup(@Body() createUserDto: CreateUserDto){
     return this.authService.signup(createUserDto);
   }
