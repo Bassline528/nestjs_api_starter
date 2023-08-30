@@ -58,6 +58,13 @@ $ yarn run test:e2e
 $ yarn run test:cov
 ```
 
+# copy .env.example to .env and fill in the values
+
+```bash
+  $ cp .env.example .env
+```
+
+
 ## DB
   
   ```bash
